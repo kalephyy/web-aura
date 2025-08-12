@@ -7,6 +7,7 @@ import AudioPlayer from "@/components/audio-player";
 import ThingsILoveSection from "@/components/things-i-love";
 import BirthdayWishesSection from "@/components/birthday-wishes";
 import LastWishes from "@/components/last-wishes";
+import { assetPath } from "@/lib/utils";
 
 export default function SuratPage() {
   const fullText =
@@ -22,7 +23,7 @@ export default function SuratPage() {
         <div className="relative md:self-center md:translate-y-4">
           <div className="polaroid">
             <img
-              src="/photobooth-1.jpg"
+              src={assetPath('/photobooth-1.jpg')}
               alt="Photobooth portrait"
               className="block w-full h-auto rounded-sm object-cover"
             />

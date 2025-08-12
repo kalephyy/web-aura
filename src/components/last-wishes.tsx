@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import AnimatedText from "@/components/animated-text";
+import { assetPath } from "@/lib/utils";
 
 type LastWishesProps = {
   heading?: string;
@@ -49,15 +50,15 @@ export default function LastWishes({ heading = "Last wishes", text = defaultText
       <div ref={ref} className="celebrate px-6 py-8 md:px-10 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-start">
           <div className="polaroid hidden md:block">
-            <img src="/photobooth-2.jpg" alt="Photobooth 2" className="block w-full h-auto rounded-sm object-cover" />
+            <img src={assetPath('/photobooth-2.jpg')} alt="Photobooth 2" className="block w-full h-auto rounded-sm object-cover" />
             <span className="caption">more memories ♡</span>
           </div>
           <div className="polaroid hidden md:block">
-            <img src="/photobooth-3.jpeg" alt="Photobooth 3" className="block w-full h-auto rounded-sm object-cover" />
+            <img src={assetPath('/photobooth-3.jpeg')} alt="Photobooth 3" className="block w-full h-auto rounded-sm object-cover" />
             <span className="caption">and more smiles ♡</span>
           </div>
           <div className="polaroid hidden md:block">
-            <img src="/photobooth-4.jpeg" alt="Photobooth 4" className="block w-full h-auto rounded-sm object-cover" />
+            <img src={assetPath('/photobooth-4.jpeg')} alt="Photobooth 4" className="block w-full h-auto rounded-sm object-cover" />
             <span className="caption">never-ending giggles ♡</span>
           </div>
           <div className="md:col-span-3 flex justify-center">

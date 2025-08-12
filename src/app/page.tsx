@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { assetPath } from "@/lib/utils";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -44,7 +45,7 @@ export default function Home() {
         <div className="mx-auto mb-4 inline-block rounded-2xl">
           <Link href="/surat" aria-label="Open the letter" className="group block">
             <Image
-              src="/Mail-Photos.png"
+              src={assetPath("/Mail-Photos.png")}
               alt="Envelope with a heart seal"
               width={520}
               height={320}

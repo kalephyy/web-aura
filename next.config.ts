@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   basePath: ghBase || undefined,
   assetPrefix: ghBase || undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: ghBase || '',
+  },
 };
 
 export default nextConfig;
