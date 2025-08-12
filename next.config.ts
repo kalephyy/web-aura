@@ -7,7 +7,7 @@ const repo = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
 const ghBase = isGithub && repo ? `/${repo}` : "";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: 'export',
   images: { unoptimized: true },
   basePath: ghBase || undefined,
   assetPrefix: ghBase || undefined,
