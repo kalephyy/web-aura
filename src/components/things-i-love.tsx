@@ -1,4 +1,5 @@
 import React from "react";
+import { assetPath } from "@/lib/utils";
 
 type LoveCard = {
   title: string;
@@ -26,7 +27,7 @@ export default function ThingsILoveSection({
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-flow-dense gap-4 md:gap-6">
         <div className="polaroid lg:col-span-2 lg:row-span-2">
-          <img src={photoSrc} alt="Aura" className="block w-full h-auto rounded-sm object-cover" />
+          <img src={assetPath(photoSrc)} alt="Aura" className="block w-full h-auto rounded-sm object-cover" />
           <span className="caption">Aura ♡</span>
         </div>
         {cards.map((c, i) => (

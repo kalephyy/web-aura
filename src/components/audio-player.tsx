@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, assetPath } from "@/lib/utils";
 
 type AudioPlayerProps = {
   src: string;
@@ -127,7 +127,7 @@ export default function AudioPlayer({ src, title = "", className }: AudioPlayerP
           </div>
         </div>
         <audio ref={audioRef} preload="auto">
-          <source src={src} type="audio/mpeg" />
+          <source src={assetPath(src)} type="audio/mpeg" />
         </audio>
       </div>
     </div>
